@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,700;1,800;1,900&display=swap');
+@use "@material/button/styles";
+
+$verde: #eafa2f;
+$morado:#8f7af9;
+$naranja:rgb(226, 109, 0);
+$dark-gray:#252525;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 3vmin;
+  font-family: 'Barlow', sans-serif!important;
+}
+
+html {
+  background: #151515;
+  color: #fff;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/bg.jpeg)!important;
+  background-size: cover;
+}
+
+a, h1, h2, h3, h4, h5, h6{
+  font-family: 'Barlow Condensed', sans-serif!important;
+  margin-bottom: 0px!important;
+}
+h4 {
+  margin: 0px!important;
+}
+.mdc-button--leading{
+  background: $morado;
+  color:$verde;
+  svg{
+    width: 20px;
+    height:20px;
+    background: #15151565;
+    border-radius:50%;
+  }
+}
+
+.hojas{
+  width: 43%;
+  position: fixed;
+  
+} 
+.hoja-1{
+  left: -20%;
+  top: -39%;
+  z-index: 1;
+}
+.hoja-2 {
+  right: -330px;
+  top: -533px;
+  z-index: 12;
+}
+.hoja-3 {
+  right: 26%;
+  bottom: -137px}
+
+.drop { filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); }
+.box {   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+.text {   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+/* ------ HEADER */
+
+.header {
+  background: black;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6rem;
+  z-index: 9;
+}
+.Monedas_data.number {
+  font-weight: 900;
+}
+.indicators_data.data {
+  color: $verde;
+  font-size: 0.7rem;
+}
+.header_buttons {
+  width: 40px;
+  margin-right: 20px;
+}
+/*1.logo*/
+.header_logo {
+  background: $dark-gray;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  max-width: 280px;
+  justify-content: center;
+
+    img{
+      width: 100%;
+      height: auto!important;
+      padding:10px;
+    }
+}
+
+.header_buttons svg {
+  width: 100%!important;
+  height: 100% !important;
+  background: #8f7af9;
+  align-items: center;
+  z-index: 90;
+  padding: 8px;
+  border-radius: 50%;
+}
+/*2.user*/
+
+.header_user {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 0.7rem;
+
+  .header_user_image {
+    background: $naranja;
+    width: 50px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 100;
+    border-radius: 50%;
+    margin:0 10px;
+  }
+}
+
+
+
+/*-------------VINDCADOES*/
+
+.indicators_data.data {
+  COLOR: $verde;
+  font-size: 0.7REM;
+}
+.header_indicators_icon {
+  background: #484848;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0 10px;
+  color:$verde;
+}
+.indicators_data.data
+.header_indicators {
+  display: flex;
+}
+.indicators_data.number {
+  FONT-SIZE: 1.2REM;
+  FONT-WEIGHT: bolder;
+}
+
+
+/*-------------------FOOTER*/
+.footer {
+  position: fixed;
+  background: #000000b5;
+  bottom: 0;
+  width: 100vw;
+  left: 0;
+  text-align: center;
+  font-family: "Barlow", sans-serif !important;
+  font-size: 0.8rem;
+  z-index: 4;
+
+.footer_menu {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 3fr 1fr;
+  width: 90%;
+  margin: 7px auto 0;
+
+  ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Barlow', sans-serif;
+  }
+  .header_buttons {
+    width: 40px;
+    height: 40px;
+    background: $morado;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 20px;
+    color:white;
+}
+  a {
+    color: $verde;
+    text-decoration: none;
+    :hover{
+      color:$morado;
+    }
+    svg{
+      margin-right:10px;
+    }
+  }
+}
+}
+.footer_copyright{
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.6rem;
+  background: rgb(0, 0, 0);
+  width: 100%;
+  padding: 5px;
+}
+a.mdc-button--leading {
+  border-radius: 30px;
+  height: 45px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background: $morado;
+  text-transform: uppercase;
+  max-width: 250px;
+
+  svg{
+    width: 30px!important;
+    height: 30px!important;
+    background: #210057;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 20px;
+    color: #eafa2f;
+    padding: 6px;
+  }
+}
+
+.confiabilidad {
+  position: absolute;
+  right: -356px;
+  background: #00000091;
+  color: white;
+  z-index: 99;
+  bottom: 43px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: space-around;
+
+  svg{
+    color:$verde;
+  }
+}
+
+.badge {
+  background: red;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  text-align: center;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  right: -6px;
+  top: -6px;
+}
+/*-------------------slider*/
+.title_page h1, .title_page h4 {
+  font-weight: 100;
+span{
+  font-weight: 600;
+}
+}
+
+.title_page {
+  width: 100vw;
+  text-align: center;
+  color: black;
+  position: absolute;
+  top: 20px;
+  left: -500px;
+  span{
+    font-weight: 600x;
+  }
+}
+div#root {
+  margin-top: -62px;
+}
+
+
+h2.slideTitle {
+  FONT-WEIGHT: 100;
+  color: black;
+  font-size: 1rem!important;
+}
+
+.header_indicators {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

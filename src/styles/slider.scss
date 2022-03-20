@@ -1,0 +1,142 @@
+.slideBackground{
+  background-image: '../images/bg';
+  background-size:contain;
+  background-color: #000;
+}
+.slides {
+  display: grid;
+  > .slide {
+    grid-area: 1 / -1;
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+
+  > button {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: black;
+    position: absolute;
+    font-size: 5rem;
+    width: 5rem;
+    height: 5rem;
+    top: 30%;
+    transition: opacity 0.3s;
+    opacity: 0.7;
+    z-index: 5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:first-child {
+      left: -95%;
+    }
+    &:last-child {
+      right: -95%;
+    }
+  }
+}
+
+.slide {
+  //transform-style: preserve-3d;
+  // border: solid 1px red;
+
+  // &[data-active] {
+  //   .slideContent > * {
+  //     transform: none;
+  //     opacity: 1;
+  //   }
+  // }
+}
+
+.slideContent {
+  width: 30vw;
+  height: 40vw;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease-in-out;
+  opacity: 0.7;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  display: grid;
+  align-content: center;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) translateX(calc(100% * var(--offset)))
+    rotateY(calc(0deg * var(--dir)));
+}
+.slide[data-active] .slideContent {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+
+
+}
+
+.slideContentInner {
+  transform-style: preserve-3d;
+  transform: translateZ(2rem);
+  transition: opacity 0.3s linear;
+  opacity: 0;
+
+  .slideSubtitle,
+  .slideTitle {
+    font-size: 1.5çrem;
+    font-weight: normal;
+    letter-spacing: 0.2ch;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #000;
+  }
+
+  .slideSubtitle::before {
+    content: "— ";
+  }
+
+  .slideDescription {
+    margin: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.2ch;
+  }
+}
+
+
+
+.slide[data-active] {
+  z-index: 2;
+  pointer-events: auto;
+  transform: scale(1)!important;
+  opacity: 1!important;
+
+  .slideBackground {
+    opacity: 0.2;
+    transform: none;
+  }
+
+  .slideContentInner {
+    opacity: 1;
+  }
+
+  .slideContent {
+    --x: calc(var(--px) - 0.5);
+    --y: calc(var(--py) - 0.5);
+    opacity: 1;
+
+    transform: perspective(1000px);
+
+    &:hover {
+      transition: none;
+      transform: perspective(1000px) rotateY(calc(var(--x) * 45deg))
+        rotateX(calc(var(--y) * -45deg));
+    }
+  }
+}
+.header_indicators_Monedas {
+  display: flex;
+  align-items: center;
+}
