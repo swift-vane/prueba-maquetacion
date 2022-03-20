@@ -4,7 +4,7 @@ import React from 'react';
 console.clear();
 
 const slides = [
-  {title: "Marca",image:"https://i.imgur.com/5F93qkw.png",  },
+  {title: "Marca",image:"https://i.imgur.com/5F93qkw.png",},
   {title: "Marca",image:"https://i.imgur.com/RUxWey3.png",},
   {title: "Marca", image:"https://i.imgur.com/rOwC9dr.png"}
 ];

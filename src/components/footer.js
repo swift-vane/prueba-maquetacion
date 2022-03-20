@@ -9,7 +9,7 @@ function Footer (){
         <div>
              <div className='confiabilidad'>
         <div className='icon'> <Icon icon="heart" size={40}/></div>
-        <div className='title'>Confiabiliad Responsable</div>
+        <div className='title'>Confiabiliad &nbsp; Responsable</div>
         <div className='badge'>1</div>
       </div>
         <div className='footer'>

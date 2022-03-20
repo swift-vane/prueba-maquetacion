@@ -15,7 +15,7 @@ $dark-gray:#252525;
 
 html,
 body {
-  height: 100%;
+  min-height: 99vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -35,6 +35,7 @@ body {
   align-items: center;
   background-image: url(../images/bg.jpeg)!important;
   background-size: cover;
+  background-position: bottom center;
 }
 
 a, h1, h2, h3, h4, h5, h6{
@@ -61,13 +62,13 @@ h4 {
   
 } 
 .hoja-1{
-  left: -20%;
+  left: -23%;
   top: -39%;
   z-index: 1;
 }
 .hoja-2 {
-  right: -330px;
-  top: -533px;
+  right: -32%;
+  top: -38%;
   z-index: 12;
 }
 .hoja-3 {
@@ -85,12 +86,13 @@ h4 {
   width: 100vw;
   top: 0;
   left: 0;
-  height: 80px;
+  min-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.6rem;
   z-index: 9;
+  padding: 10px 20px;
 }
 .Monedas_data.number {
   font-weight: 900;
@@ -138,15 +140,15 @@ h4 {
 
   .header_user_image {
     background: $naranja;
-    width: 50px;
-    height:50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin:0 10px;
+    background: #e26d00;
+    padding: 0px;
     font-size: 1.3rem;
     font-weight: 100;
     border-radius: 50%;
-    margin:0 10px;
   }
 }
 
@@ -196,7 +198,7 @@ h4 {
   text-align: center;
   grid-template-columns: 3fr 1fr;
   width: 90%;
-  margin: 7px auto 0;
+  align-items: center;
 
   ul{
     list-style: none;
@@ -235,16 +237,18 @@ h4 {
   width: 100%;
   padding: 5px;
 }
+
 a.mdc-button--leading {
-  border-radius: 30px;
-  height: 45px;
+  border-radius: 63px;
+  height: 40px;
   font-size: 1rem;
   display: flex;
   justify-content: start;
   align-items: center;
-  background: $morado;
+  background: #8f7af9;
   text-transform: uppercase;
-  max-width: 250px;
+  width: 225px;
+
 
   svg{
     width: 30px!important;
@@ -262,20 +266,24 @@ a.mdc-button--leading {
 
 .confiabilidad {
   position: absolute;
-  right: -356px;
+  right: -97%;
   background: #00000091;
   color: white;
   z-index: 99;
-  bottom: 43px;
-  width: 200px;
+  bottom: 80px;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 1rem;
   border-radius: 10px;
-  justify-content: space-around;
+  justify-content: space-between;
+  height: auto !important;
+  font-size: 24px;
+  max-width: 250px;
+  width: 100%;
 
   svg{
     color:$verde;
+    margin-right:5PX;
   }
 }
 
@@ -302,9 +310,9 @@ span{
   width: 100vw;
   text-align: center;
   color: black;
-  position: absolute;
-  top: 20px;
-  left: -500px;
+  position: fixed;
+  top: 10%;
+  left: 0%;
   span{
     font-weight: 600x;
   }
