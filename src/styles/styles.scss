@@ -15,18 +15,19 @@ $dark-gray:#252525;
 
 html,
 body {
-  min-height: 99vh;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   margin: 0;
   padding: 0;
   font-size: 3vmin;
-  font-family: 'Barlow', sans-serif!important;
+  font-family: "Barlow", sans-serif !important;
+  overflow: hidden;
 }
 
 html {
   background: #151515;
   color: #fff;
-  overflow: hidden;
+
 }
 
 body {
@@ -36,6 +37,7 @@ body {
   background-image: url(../images/bg.jpeg)!important;
   background-size: cover;
   background-position: bottom center;
+  
 }
 
 a, h1, h2, h3, h4, h5, h6{
@@ -78,6 +80,8 @@ h4 {
 .drop { filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); }
 .box {   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
 .text {   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+
+.App{}
 /* ------ HEADER */
 
 .header {
@@ -86,7 +90,6 @@ h4 {
   width: 100vw;
   top: 0;
   left: 0;
-  min-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,7 +101,7 @@ h4 {
 }
 .indicators_data.data {
   color: $verde;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
 }
 .header_buttons {
   width: 40px;
@@ -107,7 +110,7 @@ h4 {
 /*1.logo*/
 .header_logo {
   background: #252525;
-  height: 80px;
+  height: 100%;
   display: flex;
   align-items: center;
   max-width: 280px;
@@ -156,10 +159,6 @@ h4 {
 
 /*-------------VINDCADOES*/
 
-.indicators_data.data {
-  COLOR: $verde;
-  font-size: 0.7REM;
-}
 .header_indicators_icon {
   background: #484848;
   width: 40px;
@@ -247,7 +246,8 @@ a.mdc-button--leading {
   align-items: center;
   background: #8f7af9;
   text-transform: uppercase;
-  width: 225px;
+  width: max-content;
+  padding-right: 20px;
 
 
   svg{
@@ -277,9 +277,11 @@ a.mdc-button--leading {
   justify-content: space-between;
   height: auto !important;
   font-size: 24px;
-  max-width: 250px;
-  right: 20px;
-  bottom: 130px;
+  max-width: 200px;
+  right: 5px;
+  bottom: 150px;
+  font-family: "Barlow Condensed", sans-serif !important;
+
 
   svg{
     color:$verde;
@@ -330,7 +332,7 @@ h2.slideTitle {
 
 .header_indicators {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center;
 }
 
@@ -342,7 +344,7 @@ h2.slideTitle {
 @media (max-width: 480px) {
 
   .title_page {
-    top: 200px;
+    top: 100px;
    font-size: 1.3rem;
 }
 .slides {
@@ -371,6 +373,9 @@ div#root {
 /*tablet*/
 
 @media (max-width: 1024px) {
+  .confiabilidad {
+    bottom: 120px;
+  }
   .header {
     font-size: 0.8rem;
     display: grid;
@@ -379,9 +384,13 @@ div#root {
         "slider slider slider"
         "footer footer footer";
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 2fr 1.5fr 0.5fr;
+    grid-template-columns: 2fr 2fr 0.5fr;
 }
 
+.header_buttons svg{
+  transform: scale(0.7); /* Igual que: scaleX(0.7) scaleY(0.7) */
+
+}
 .header_logo{
   grid-area: head-logo;
    img {
@@ -400,14 +409,23 @@ div#root {
 }
 .footer {
   grid-area: footer;
+  bottom: 0px;
 }
 .header_buttons {
   grid-area: buttons;
   top: 5px;
   right: 10%;
 }
+.title_page {
+  top: 15%;
 }
-
+.footer .footer_menu {
+  width: 100%;
+}
+.footer .footer_menu ul {
+  padding: 0;
+}
+}
 /*notebook*/
 
 @media (max-width: 1200px) {

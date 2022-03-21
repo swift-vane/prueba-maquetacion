@@ -1,7 +1,6 @@
 
 import Icon from "../components/iconos.jsx";
 import hoja1 from '../images/hojas-1.png';
-import hoja3 from '../images/hojas-3.png';
 
 function Footer (){
     return(
