@@ -92,7 +92,6 @@ h4 {
   align-items: center;
   font-size: 0.6rem;
   z-index: 9;
-  padding: 10px 20px;
 }
 .Monedas_data.number {
   font-weight: 900;
@@ -107,12 +106,13 @@ h4 {
 }
 /*1.logo*/
 .header_logo {
-  background: $dark-gray;
-  height: 100%;
+  background: #252525;
+  height: 80px;
   display: flex;
   align-items: center;
   max-width: 280px;
   justify-content: center;
+  
 
     img{
       width: 100%;
@@ -334,3 +334,67 @@ h2.slideTitle {
   align-items: center;
 }
 
+
+
+/*-------------------RESPONSIVE*/
+/*mobile*/
+
+@media (max-width: 480px) {
+      .header {
+        font-size: 0.8rem;
+        display: grid;
+        grid-template-areas:
+            "head-logo user buttons"
+            "slider slider slider"
+            "footer footer footer";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 2fr 1.5fr 0.5fr;
+    }
+
+    .header_logo{
+      grid-area: head-logo;
+    }
+    .header_user {
+      grid-area: user;
+      align-items: center;
+      justify-content: start;
+      font-size: 0.7rem;
+    }
+
+    .header_indicators {
+      grid-area: slider;
+    }
+    .footer {
+      grid-area: footer;
+    }
+    .header_buttons {
+      grid-area: buttons;
+      top: 5px;
+      right: 10%;
+  }
+  .title_page {
+    top: 200px;
+   font-size: 1.3rem;
+}
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 16px;
+  }
+}
+/*tablet*/
+
+@media (max-width: 1024px) {
+  .text {
+    font-size: 16px;
+  }
+}
+
+/*notebook*/
+
+@media (max-width: 1200px) {
+  .text {
+    font-size: 16px;
+  }
+}
