@@ -265,21 +265,21 @@ a.mdc-button--leading {
 }
 
 .confiabilidad {
-  position: absolute;
-  right: -97%;
+  position: fixed;
+  margin-top: 0;
   background: #00000091;
   color: white;
   z-index: 99;
-  bottom: 80px;
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 10px;
   justify-content: space-between;
   height: auto !important;
   font-size: 24px;
   max-width: 250px;
-  width: 100%;
+  right: 20px;
+  bottom: 130px;
 
   svg{
     color:$verde;
@@ -340,41 +340,26 @@ h2.slideTitle {
 /*mobile*/
 
 @media (max-width: 480px) {
-      .header {
-        font-size: 0.8rem;
-        display: grid;
-        grid-template-areas:
-            "head-logo user buttons"
-            "slider slider slider"
-            "footer footer footer";
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 2fr 1.5fr 0.5fr;
-    }
 
-    .header_logo{
-      grid-area: head-logo;
-    }
-    .header_user {
-      grid-area: user;
-      align-items: center;
-      justify-content: start;
-      font-size: 0.7rem;
-    }
-
-    .header_indicators {
-      grid-area: slider;
-    }
-    .footer {
-      grid-area: footer;
-    }
-    .header_buttons {
-      grid-area: buttons;
-      top: 5px;
-      right: 10%;
-  }
   .title_page {
     top: 200px;
    font-size: 1.3rem;
+}
+.slides {
+  display: grid;
+  transform: scale(1.3);
+  margin-top: 20%;
+}
+footer {
+  position: fixed;
+  bottom: 12%;
+}
+div#root {
+  margin-top: 0px;
+}
+.slides > .slide {
+  transform: scale(1.0);
+  opacity: 0.7;
 }
 }
 
@@ -386,9 +371,41 @@ h2.slideTitle {
 /*tablet*/
 
 @media (max-width: 1024px) {
-  .text {
-    font-size: 16px;
-  }
+  .header {
+    font-size: 0.8rem;
+    display: grid;
+    grid-template-areas:
+        "head-logo user buttons"
+        "slider slider slider"
+        "footer footer footer";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1.5fr 0.5fr;
+}
+
+.header_logo{
+  grid-area: head-logo;
+   img {
+    max-width: 100%;
+}
+}
+.header_user {
+  grid-area: user;
+  align-items: center;
+  justify-content: start;
+  font-size: 0.7rem;
+}
+
+.header_indicators {
+  grid-area: slider;
+}
+.footer {
+  grid-area: footer;
+}
+.header_buttons {
+  grid-area: buttons;
+  top: 5px;
+  right: 10%;
+}
 }
 
 /*notebook*/

@@ -1,13 +1,14 @@
 
 import Icon from "../components/iconos.jsx";
 import hoja1 from '../images/hojas-1.png';
+import hoja3 from '../images/hojas-3.png';
 
 function Footer (){
     return(
         <div>
              <div className='confiabilidad'>
         <div className='icon'> <Icon icon="heart" size={40}/></div>
-        <div className='title'>Confiabiliad &nbsp; Responsable</div>
+        <div className='title'>Confiabiliad Responsable</div>
         <div className='badge'>1</div>
       </div>
         <div className='footer'>
@@ -32,7 +33,7 @@ function Footer (){
            <div className='footer_copyright'>
                 <p>Footer copyright 2020 todo los derechos reservados</p>
             </div>
-            <img src={hoja1} alt="Hoja de decoracion1"className='hojas hoja-1'/>
+            <img src={hoja1} alt="Hoja de decoracion1" className='hojas hoja-1'/>
               
           
         </div>
